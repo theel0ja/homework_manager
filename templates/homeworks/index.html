@@ -1,0 +1,11 @@
+<h1>List of homework</h1>
+
+<ul>
+
+{% for homework in homeworks %}
+  <li><a href="{% url 'homeworks:show' homework.id %}">{{ homework }}</a></li>
+{% empty %}
+  <p>No objects found.</p>
+{% endfor %}
+
+</ul>
